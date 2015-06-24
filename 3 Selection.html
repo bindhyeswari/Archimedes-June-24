@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+
+    </style>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var div = document.querySelector('.user');
+            console.log(div);
+
+            var email_inp = document.querySelector('[name="email"]');
+            console.log(email_inp);
+
+            document.getElementById('ancestor').firstElementChild.lastElementChild.innerHTML = 'descendant';
+
+            console.log(document.getElementById('ancestor').parentNode);
+        });
+
+
+
+    </script>
+</head>
+<body>
+
+    <input type="text" name="username"/>
+    <input type="text" name="email"/>
+    <input type="text" name="password"/>
+
+    <div class="user">John</div>
+    <div class="user">Inga</div>
+    <div class="user">Raymond</div>
+
+<div id="ancestor">
+    <div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
