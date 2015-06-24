@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOM Api</title>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var lis = document.getElementsByTagName('li');
+            var ul = document.getElementsByTagName('ul')[0];
+
+            console.log(ul.childNodes);
+
+            function getChildren(node) {
+                // uses only the Node API
+                // print an array of only elements
+            }
+
+            console.log(ul.children);
+
+            console.log(lis); // HTMLLIElement
+        });
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>Amy</li>
+        <li>Lei</li>
+        <li>Alejandro</li>
+        <li>Charles</li>
+    </ul>
+</body>
+</html>
