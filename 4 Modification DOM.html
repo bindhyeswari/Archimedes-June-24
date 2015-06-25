@@ -18,6 +18,11 @@
 
             // insertBefore
 
+            var div = document.getElementById('base');
+            console.log(div.firstElementChild.firstElementChild.firstElementChild.innerHTML.trim());
+            console.log(div.textContent.trim());
+
+
         });
 
     </script>
@@ -31,6 +36,16 @@
             Second Div
             <div>
                 Third Div
+            </div>
+        </div>
+    </div>
+
+    <div id="base">
+        <div>
+            <div>
+                <span>
+                    <span>Charles Park</span>
+                </span>
             </div>
         </div>
     </div>

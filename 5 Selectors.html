@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="base.css"/>
+    <style>
+
+        #info, #data {
+            background-color: green;
+        }
+
+    </style>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log(document.querySelectorAll('#info, #data'));
+
+            console.log(document.getElementById('info').querySelectorAll('span'));
+        });
+
+
+
+    </script>
+</head>
+<body>
+    <div id="info">Info
+        <span>My data in a span</span>
+        <div>One more div</div>
+        <span>One more span</span>
+    </div>
+    <div id="data">Data</div>
+</body>
+</html>

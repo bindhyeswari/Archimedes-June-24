@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var collection =
+                document.querySelectorAll('#CompanylistResults > tbody > tr');
+        // console.log(collection);
+        var arr_trs = Array.prototype.slice.call(collection);
+
+        // convert the collection - nodelist into an array
+        // var collection = Array.prototype.slice.call(collection)
+        // filter the odd ones out
+        // extract the name from the tr element
+
+        var arr_trs_odd = arr_trs.filter(function (element, index) {
+            // this will return the desired trs with content
+            return index % 2 === 0;
+        }).map(function (tr) {
+
+            var propertynames = ['name', 'symbol', 'marketcap', 'invalid', 'country', 'ipoyear', 'subsector'];
+            var obj = {};
+            propertynames.forEach(function (propertyname, index) {
+                obj[propertyname] = tr.children[index].textContent.trim()
+            });
+
+            delete obj['invalid'];
+
+            return obj;
+        });
+
+        console.log(arr_trs_odd);
+
+        var hyperlink = document.createElement('a');
+
+        hyperlink.href = 'http://www.google.com';
+
+        // hyperlink.setAttribute('href', 'http://www.google.com');
+
+        hyperlink.innerHTML = 'link to google';
+
+        document.body.appendChild(hyperlink);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var collection =
+                document.querySelectorAll('#CompanylistResults > tbody > tr');
+        // console.log(collection);
+        var arr_trs = Array.prototype.slice.call(collection);
+
+        // convert the collection - nodelist into an array
+        // var collection = Array.prototype.slice.call(collection)
+        // filter the odd ones out
+        // extract the name from the tr element
+
+        var arr_trs_odd = arr_trs.filter(function (element, index) {
+            // this will return the desired trs with content
+            return index % 2 === 0;
+        }).map(function (tr) {
+
+            var propertynames = ['name', 'symbol', 'marketcap', 'invalid', 'country', 'ipoyear', 'subsector'];
+            var obj = {};
+            propertynames.forEach(function (propertyname, index) {
+                obj[propertyname] = tr.children[index].textContent.trim()
+            });
+
+            delete obj['invalid'];
+
+            return obj;
+        });
+
+        console.log(JSON.stringify(arr_trs_odd));
+
+        var hyperlink = document.createElement('a');
+
+        hyperlink.href = 'data:text/json;utf-8,' + JSON.stringify(arr_trs_odd);
+
+        // hyperlink.setAttribute('href', 'http://www.google.com');
+
+        hyperlink.innerHTML = 'link to google';
+
+        document.body.appendChild(hyperlink);
+
+    </script>
+</head>
+<body>
+<a href="data:text/plain;utf-8,asdfasdf" download="data.exe">Download File</a>
+</body>
+</html>
